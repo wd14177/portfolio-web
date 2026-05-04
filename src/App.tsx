@@ -668,6 +668,55 @@ export default function App() {
         </div>
       </section>
 
+      {/* Learning System Insight Section */}
+      <section className="py-20 z-10 relative bg-white">
+        <div className="max-w-7xl mx-auto px-8">
+          <SectionHeading subtitle="DOMAIN INSIGHT">
+            왜 학습 시스템에 대한 <br /> <span className="font-light text-body-muted">깊은 이해가 중요한가</span>
+          </SectionHeading>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { 
+                title: "커리큘럼에서 시스템 설계로", 
+                desc: "AI 및 코딩 교육 콘텐츠 16종을 설계하며 학습 흐름을 단계별 시스템 구조로 정의했습니다." 
+              },
+              { 
+                title: "학습 흐름 모델링", 
+                desc: "학습자의 이해도 변화와 행동 데이터를 기반으로 피드백 루프를 설계한 경험이 있습니다." 
+              },
+              { 
+                title: "피드백 시스템 설계", 
+                desc: "단순 전달형 교육이 아닌 실시간 피드백 기반 학습 구조를 설계했습니다." 
+              }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-canvas-parchment p-10 rounded-[32px] border border-gray-100 shadow-sm hover:shadow-xl transition-all"
+              >
+                 <h4 className="text-2xl font-bold tracking-tight text-ink mb-6 leading-tight">{item.title}</h4>
+                 <p className="text-body-muted text-sm font-normal leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mt-16 text-center"
+          >
+            <p className="text-action-blue font-bold text-lg">
+              → 이 경험은 Paraworks와 같은 AI 기반 학습/업무 시스템 설계로 확장되었습니다.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Why Me Section */}
       <section className="py-40 z-10 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-8">
