@@ -265,6 +265,21 @@ export default function App() {
           >
             AI RESEARCH & DEVELOPMENT
           </motion.div>
+
+          <div className="flex justify-center mb-10">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.8 }}
+              className="flex items-center gap-3 px-6 py-2.5 bg-white/50 backdrop-blur-md rounded-full border border-gray-100 shadow-sm"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-body-muted">Hiring Status: Active</span>
+            </motion.div>
+          </div>
           
           <motion.h1 
             initial={{ opacity: 0, y: 40 }}
@@ -281,15 +296,16 @@ export default function App() {
             transition={{ delay: 0.6, duration: 1 }}
             className="flex flex-col items-center gap-14"
           >
-            <p className="text-xl md:text-3xl text-body-muted max-w-3xl mx-auto leading-relaxed font-normal tracking-tight">
-              교육 문제를 AI 기반 시스템으로 <span className="text-ink font-bold">구조적으로 해결</span>하고 <br /> 실시간 지능형 에이전트를 설계하는 AI 엔지니어입니다.
+            <p className="text-xl md:text-3xl text-body-muted max-w-4xl mx-auto leading-relaxed font-normal tracking-tight">
+              교육의 문제를 <span className="text-ink font-bold">AI Agent 시스템</span>으로 정의하고, <br />
+              <span className="text-action-blue font-bold">LLM · RAG · Multi-Agent</span> 자율 구조를 구축하여 <br /> 비즈니스 임팩트를 설계하는 AI Engineer 김종우입니다.
             </p>
             <div className="cta-row flex flex-col sm:flex-row gap-6">
-              <a href="#projects" className="bg-action-blue text-white px-12 py-5 rounded-full font-bold hover:scale-105 active:scale-95 transition-all text-sm uppercase tracking-widest shadow-lg shadow-action-blue/20">
-                View My Projects
+              <a href="mailto:wd14177@gmail.com" className="bg-action-blue text-white px-12 py-5 rounded-full font-bold hover:scale-105 active:scale-95 transition-all text-sm uppercase tracking-widest shadow-xl shadow-action-blue/20">
+                Contact for Hire
               </a>
-              <a href="mailto:wd14177@gmail.com" className="bg-ink text-white px-12 py-5 rounded-full font-bold hover:scale-105 active:scale-95 transition-all text-sm uppercase tracking-widest">
-                Contact Me
+              <a href="#projects" className="bg-white text-ink border border-gray-200 px-12 py-5 rounded-full font-bold hover:bg-gray-50 transition-all text-sm uppercase tracking-widest">
+                View Proof of Work
               </a>
             </div>
           </motion.div>
@@ -301,7 +317,8 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <SectionHeading subtitle="PROBLEM & MISSION">
             <span className="text-body-muted font-light">교육의 핵심 문제는 <br /> 콘텐츠 부족이 아니라</span> <br />
-            <span className="text-ink font-bold">학습 과정과 <br /> 실시간 피드백</span><span className="text-body-muted font-light">의 부재입니다.</span>
+            <span className="text-ink font-bold">학습 과정과 <br /> 실시간 피드백</span><span className="text-body-muted font-light">의 부재입니다.</span> <br />
+            <span className="text-action-blue text-lg lg:text-2xl mt-8 block font-medium">→ 이를 해결하기 위해, 저는 다음과 같은 AI 기반 학습 시스템을 설계했습니다.</span>
           </SectionHeading>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -350,23 +367,45 @@ export default function App() {
             데이터와 맥락으로 설계한 <br /> <span className="font-light opacity-50">인텔리전트 시스템 아키텍처</span>
           </SectionHeading>
 
-          {/* Project 1: Paraworks */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-56">
+          {/* Project 1: Paraworks - MAIN PROJECT */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-64">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <span className="px-3 py-1 bg-action-blue/10 border border-action-blue/20 text-action-blue text-[10px] font-bold tracking-widest uppercase rounded">PROJECT 1</span>
+                <span className="px-4 py-1.5 bg-action-blue text-white text-[10px] font-black tracking-widest uppercase rounded-full shadow-lg shadow-action-blue/20">🔥 MAIN PROJECT</span>
               </div>
-              <h3 className="text-5xl lg:text-6xl font-extrabold mb-8 tracking-tighter text-ink leading-tight">Paraworks : <br />능동형 업무 히스토리 <br />관리 솔루션</h3>
-              <p className="text-body-muted text-xl mb-12 leading-relaxed max-w-xl font-normal">
-                채팅(Slack)과 메일(Gmail) 등 파편화된 소통 채널에 흩어져 있는 <strong>업무 히스토리 및 의사결정 맥락(Context)의 유실을 방지</strong>하고 중앙화합니다.
+              <h3 className="text-6xl lg:text-7xl font-extrabold mb-8 tracking-tighter text-ink leading-[1.1]">Paraworks : <br />능동형 업무 히스토리 <br />엔진</h3>
+              <p className="text-body-muted text-xl mb-10 leading-relaxed max-w-xl font-normal">
+                파편화된 소통 채널(Slack, Gmail)의 <strong>의사결정 맥락을 실시간으로 자율 추출</strong>하여 전사 지식 자산으로 전환하는 AI 에이전트 시스템입니다.
               </p>
+
+              {/* IMPACT SECTION */}
+              <div className="bg-canvas-parchment p-8 rounded-3xl mb-10 border border-gray-100">
+                <h4 className="text-xs font-black text-ink uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <Activity size={14} /> Impact & Value
+                </h4>
+                <ul className="space-y-3 text-sm text-body-muted">
+                  <li className="flex gap-2">
+                    <span className="text-action-blue font-bold">·</span> 
+                    <span><strong className="text-ink">Zero-Click Archiving:</strong> 사용자 개입 없는 히스토리 자동 축적</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-action-blue font-bold">·</span>
+                    <span><strong className="text-ink">Context Persistence:</strong> 조직 내 정보 블랙박스 현상 완벽 제거</span>
+                  </li>
+                  <li className="mt-4 pt-4 border-t border-gray-200 font-bold text-action-blue">
+                    → 인수인계 및 히스토리 추적 리소스 80% 절감 가능 <br />
+                    → 교육/학습 의사결정 데이터셋 구축 최적화
+                  </li>
+                </ul>
+              </div>
+
               <div className="flex flex-wrap gap-3 mb-10">
                 {['Multi-Agent', 'LangChain', 'Vector DB', 'HITL'].map((skill, i) => (
-                  <span key={i} className="px-4 py-2 bg-canvas-parchment rounded-lg text-xs font-bold uppercase tracking-wider text-body-muted border border-gray-200">{skill}</span>
+                  <span key={i} className="px-4 py-2 bg-white rounded-lg text-xs font-black uppercase tracking-wider text-action-blue border border-action-blue/10 shadow-sm">{skill}</span>
                 ))}
               </div>
               <div className="flex gap-4">
@@ -395,19 +434,20 @@ export default function App() {
             </ThreeDCard>
           </div>
 
-          {/* Project 2: Multi-modal AI */}
+          {/* Project 2: Multi-modal AI - CORE PROJECT */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-56">
             <div className="lg:order-2">
               <div className="flex items-center gap-4 mb-8">
-                <span className="px-3 py-1 bg-purple-500/10 border border-purple-500/20 text-purple-600 text-[10px] font-bold tracking-widest uppercase rounded">PROJECT 2</span>
+                <span className="px-3 py-1 bg-purple-500/10 border border-purple-500/20 text-purple-600 text-[10px] font-bold tracking-widest uppercase rounded-full">CORE PROJECT</span>
               </div>
-              <h3 className="text-5xl lg:text-6xl font-extrabold mb-8 tracking-tighter text-ink leading-tight">Vision-Voice Integrated <br /> 무인 AI 리테일 시스템</h3>
+              <h3 className="text-5xl lg:text-6xl font-extrabold mb-8 tracking-tighter text-ink leading-tight">Vision-Voice Integrated <br /> 멀티모달 지능형 시스템</h3>
               <p className="text-body-muted text-xl mb-12 leading-relaxed max-w-xl font-normal">
-                Vision과 Voice를 결합한 통합 멀티모달 상호작용 시스템입니다. 단순 카메라 감지를 넘어 사용자의 음성 의도를 복합적으로 분석하여 리테일 경험을 혁신합니다.
+                Vision 센서와 Voice 인터페이스를 연계하여 사용자의 의도를 분석하는 시스템입니다. 단순 행동 인식을 넘어 <strong>학습자의 비정형 데이터를 실시간으로 수치화</strong>합니다. <br />
+                <span className="text-purple-600 font-bold mt-4 block">→ 이 구조는 학습자의 몰입도 및 행동 분석 교육 AI로 즉시 확장 가능합니다.</span>
               </p>
               <div className="flex flex-wrap gap-3 mb-10">
                 {['Python', 'PyTorch', 'OpenCV', 'FastAPI'].map((skill, i) => (
-                  <span key={i} className="px-4 py-2 bg-canvas-parchment rounded-lg text-xs font-bold uppercase tracking-wider text-body-muted border border-gray-200">{skill}</span>
+                  <span key={i} className="px-4 py-2 bg-purple-500/5 rounded-lg text-xs font-black uppercase tracking-wider text-purple-600 border border-purple-500/10 shadow-sm">{skill}</span>
                 ))}
               </div>
               <div className="grid grid-cols-2 gap-6 mb-10">
@@ -460,23 +500,23 @@ export default function App() {
             </ThreeDCard>
           </div>
 
-          {/* Project 3: Predict sales */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          {/* Project 3: Predict sales - SUPPORT PROJECT */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center opacity-80 hover:opacity-100 transition-opacity">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
                <div className="flex items-center gap-4 mb-8">
-                <span className="px-3 py-1 bg-green-500/10 border border-green-500/20 text-green-600 text-[10px] font-bold tracking-widest uppercase rounded">PROJECT 3</span>
+                <span className="px-3 py-1 bg-green-500/10 border border-green-500/20 text-green-600 text-[10px] font-bold tracking-widest uppercase rounded-full">SUPPORT PROJECT</span>
               </div>
-              <h3 className="text-5xl lg:text-6xl font-extrabold mb-8 tracking-tighter text-ink leading-tight">중고 거래 확률 <br /> 예측 서비스</h3>
-              <p className="text-body-muted text-xl mb-12 leading-relaxed max-w-xl font-normal">
-                직관에 의존하던 중고 거래의 의사결정을 데이터로 구조화했습니다. 약 22만 건의 데이터를 정제하여 최고 성능의 예측 모델을 서비스화했습니다.
+              <h3 className="text-4xl lg:text-5xl font-extrabold mb-8 tracking-tighter text-ink leading-tight">데이터 기반 의사결정 <br /> AI 시스템</h3>
+              <p className="text-body-muted text-lg mb-12 leading-relaxed max-w-xl font-normal">
+                22만 건의 실제 거래 데이터를 가공하여 <strong>중고 거래 시장의 정보 불균형을 분석</strong>하고 판매 확률을 정밀 예측하는 시스템입니다.
               </p>
               <div className="flex flex-wrap gap-3 mb-10">
-                {['Scikit-Learn', 'CatBoost', 'Pandas', 'Flask'].map((skill, i) => (
-                  <span key={i} className="px-4 py-2 bg-canvas-parchment rounded-lg text-xs font-bold uppercase tracking-wider text-body-muted border border-gray-200">{skill}</span>
+                {['CatBoost', 'Flask', 'Data Pipeline'].map((skill, i) => (
+                  <span key={i} className="px-4 py-2 bg-green-500/5 rounded-lg text-xs font-black uppercase tracking-wider text-green-600 border border-green-500/10 shadow-sm">{skill}</span>
                 ))}
               </div>
               <div className="flex gap-16">
@@ -539,8 +579,8 @@ export default function App() {
       {/* Experience Section Redesign */}
       <section id="experience" className="py-40 z-10 relative bg-canvas-parchment">
         <div className="max-w-7xl mx-auto px-8">
-          <SectionHeading subtitle="CAREER JOURNEY">
-            설계 역량의 확장 <br /> <span className="font-light text-body-muted">Legacy Experience to AI Core</span>
+          <SectionHeading subtitle="CORE COMPETENCIES">
+            설계 역량의 확장 <br /> <span className="font-light text-body-muted">Legacy Domain to AI Core</span>
           </SectionHeading>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
@@ -548,10 +588,10 @@ export default function App() {
             <div className="lg:col-span-12 space-y-16">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
-                  { from: "커리큘럼 설계", to: "Pipeline Architecture", desc: "학습 흐름을 알고리즘적 파이프라인으로 구조화하여 자동화된 흐름 설계 역량을 확보했습니다." },
-                  { from: "교안 개발", to: "Semantic UI Design", desc: "사용자 중심의 직관적인 인터페이스를 넘어, AI가 이해할 수 있는 정형화된 데이터 구조를 설계합니다." },
-                  { from: "학습 흐름 통제", to: "Agent Logic Control", desc: "복합적인 변수와 예외 상황을 고려한 견고한 에이전트 인터랙션 가이드라인을 구축합니다." },
-                  { from: "피드백 시스템", to: "Optimization Loop", desc: "결과에 대한 단순 평가를 넘어, 실시간 피드백 루프를 통한 지속적인 시스템 성능 고도화를 추구합니다." },
+                  { from: "커리큘럼 설계", to: "Pipeline Architecture", desc: "학습 맥락을 알고리즘 파이프라인으로 구조화하여 시스템 자동화를 구현합니다.", link: "Paraworks" },
+                  { from: "교안 개발", to: "Semantic Data Design", desc: "사용자 중심의 UI를 넘어, AI 에이전트가 이해할 수 있는 정형 데이터 구조를 설계합니다.", link: "Multimodal AI" },
+                  { from: "학습 흐름 통제", to: "Agent Logic Control", desc: "복합적인 변수와 예외 상황을 처리하는 견고한 에이전트 인터랙션 로직을 구축합니다.", link: "Paraworks" },
+                  { from: "피드백 시스템", to: "Optimization Loop", desc: "실시간 피드백 루프를 통해 지속적으로 시스템 성능을 고도화하는 운영 역량을 보유합니다.", link: "AI Retail" },
                 ].map((item, i) => (
                   <motion.div 
                     key={i}
@@ -562,7 +602,8 @@ export default function App() {
                     className="bg-white p-10 rounded-[32px] border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-action-blue/5 transition-all group"
                   >
                      <div className="text-[10px] font-black text-body-muted uppercase tracking-widest mb-6 block opacity-50">{item.from}</div>
-                     <h4 className="text-2xl font-bold tracking-tight text-ink mb-6 group-hover:text-action-blue transition-colors leading-tight">{item.to}</h4>
+                     <h4 className="text-2xl font-bold tracking-tight text-ink mb-2 group-hover:text-action-blue transition-colors leading-tight">{item.to}</h4>
+                     <p className="text-action-blue text-[10px] font-bold mb-6 tracking-wide">Applied in {item.link}</p>
                      <p className="text-body-muted text-sm font-normal leading-relaxed">{item.desc}</p>
                   </motion.div>
                 ))}
@@ -595,6 +636,49 @@ export default function App() {
                 <p className="text-white text-sm leading-relaxed max-w-sm font-medium relative z-10">
                   모델 구현을 넘어 사용자와 시스템이 상호작용하는 모든 접점의 지능을 설계합니다.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Me Section */}
+      <section className="py-40 z-10 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="bg-ink rounded-[48px] p-12 lg:p-24 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-action-blue/10 blur-[120px] pointer-events-none" />
+            
+            <div className="max-w-3xl relative z-10">
+              <h2 className="text-white text-5xl lg:text-7xl font-extrabold tracking-tighter leading-tight mb-16">
+                Why Me
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 text-white/90">
+                <div className="space-y-4">
+                  <h4 className="text-action-blue font-black uppercase tracking-widest text-xs">Core Value 01</h4>
+                  <p className="text-xl font-bold leading-snug">실무 도메인 문제 해결 중심</p>
+                  <p className="text-sm opacity-60">단순 모델 구현을 넘어, 교육 현장의 고질적인 '피드백 루프 부재'를 AI 에이전트 시스템으로 해결합니다.</p>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-action-blue font-black uppercase tracking-widest text-xs">Core Value 02</h4>
+                  <p className="text-xl font-bold leading-snug">Production-Ready 설계</p>
+                  <p className="text-sm opacity-60">LangChain/LangGraph를 활용한 자율 에이전트와 RAG 파이프라인으로 확장 가능한 시스템을 구축합니다.</p>
+                </div>
+                <div className="space-span-2 space-y-4 col-span-1 md:col-span-2">
+                  <h4 className="text-action-blue font-black uppercase tracking-widest text-xs">Core Value 03</h4>
+                  <p className="text-xl font-bold leading-snug">사용자 경험 기반의 최적화</p>
+                  <p className="text-sm opacity-60">사용자의 행동 데이터를 지능형 자산으로 변환하여, 실질적인 비즈니스 가치를 창출하는 접점을 설계합니다.</p>
+                </div>
+              </div>
+              
+              <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+                <p className="text-2xl lg:text-4xl text-white font-bold leading-tight">
+                  "교육 AI의 미래를 <br />
+                  <span className="text-action-blue">시스템으로 정착</span>시킬 엔지니어입니다."
+                </p>
+                <a href="mailto:wd14177@gmail.com" className="bg-action-blue text-white px-10 py-4 rounded-full font-bold hover:scale-105 active:scale-95 transition-all text-xs uppercase tracking-widest">
+                  Let's Work Together
+                </a>
               </div>
             </div>
           </div>
