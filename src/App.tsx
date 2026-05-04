@@ -296,9 +296,10 @@ export default function App() {
             transition={{ delay: 0.6, duration: 1 }}
             className="flex flex-col items-center gap-14"
           >
-            <p className="text-xl md:text-3xl text-body-muted max-w-4xl mx-auto leading-relaxed font-normal tracking-tight">
-              교육의 문제를 <span className="text-ink font-bold">AI Agent 시스템</span>으로 정의하고, <br />
-              <span className="text-action-blue font-bold">LLM · RAG · Multi-Agent</span> 자율 구조를 구축하여 <br /> 비즈니스 임팩트를 설계하는 AI Engineer 김종우입니다.
+            <p className="text-xl md:text-3xl text-body-muted max-w-4xl mx-auto leading-tight font-normal tracking-tight">
+              교육 문제를 <span className="text-ink font-bold">AI Agent 시스템</span>으로 해결하고, <br />
+              <span className="text-action-blue font-bold">LLM · RAG · Multi-Agent</span> 구조를 활용하여 <br /> 
+              실제 동작하는 지능형 시스템을 <span className="text-ink font-bold">설계·구현</span>한 AI Engineer 김종우입니다.
             </p>
             <div className="cta-row flex flex-col sm:flex-row gap-6">
               <a href="mailto:wd14177@gmail.com" className="bg-action-blue text-white px-12 py-5 rounded-full font-bold hover:scale-105 active:scale-95 transition-all text-sm uppercase tracking-widest shadow-xl shadow-action-blue/20">
@@ -318,7 +319,7 @@ export default function App() {
           <SectionHeading subtitle="PROBLEM & MISSION">
             <span className="text-body-muted font-light">교육의 핵심 문제는 <br /> 콘텐츠 부족이 아니라</span> <br />
             <span className="text-ink font-bold">학습 과정과 <br /> 실시간 피드백</span><span className="text-body-muted font-light">의 부재입니다.</span> <br />
-            <span className="text-action-blue text-lg lg:text-2xl mt-8 block font-medium">→ 이를 해결하기 위해, 저는 다음과 같은 AI 기반 학습 시스템을 설계했습니다.</span>
+            <span className="text-action-blue text-lg lg:text-2xl mt-8 block font-medium">→ 이를 해결하기 위해, AI가 학습/업무 맥락을 자동으로 추출하는 시스템을 설계했습니다.</span>
           </SectionHeading>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -379,26 +380,51 @@ export default function App() {
               </div>
               <h3 className="text-6xl lg:text-7xl font-extrabold mb-8 tracking-tighter text-ink leading-[1.1]">Paraworks : <br />능동형 업무 히스토리 <br />엔진</h3>
               <p className="text-body-muted text-xl mb-10 leading-relaxed max-w-xl font-normal">
-                파편화된 소통 채널(Slack, Gmail)의 <strong>의사결정 맥락을 실시간으로 자율 추출</strong>하여 전사 지식 자산으로 전환하는 AI 에이전트 시스템입니다.
+                파편화된 소통 채널(Slack, Gmail)의 <strong>의사결정 맥락을 실시간으로 자율 추출</strong>하여 전사 지식 자산으로 전환하는 <span className="text-action-blue font-bold">AI 에이전트 시스템</span>입니다.
               </p>
 
-              {/* IMPACT SECTION */}
-              <div className="bg-canvas-parchment p-8 rounded-3xl mb-10 border border-gray-100">
+              {/* IMPLEMENTATION SECTION */}
+              <div className="bg-white p-8 rounded-3xl mb-6 border-2 border-action-blue/10 shadow-sm">
                 <h4 className="text-xs font-black text-ink uppercase tracking-widest mb-4 flex items-center gap-2">
-                  <Activity size={14} /> Impact & Value
+                  <Code size={14} className="text-action-blue" /> Implementation
                 </h4>
                 <ul className="space-y-3 text-sm text-body-muted">
                   <li className="flex gap-2">
                     <span className="text-action-blue font-bold">·</span> 
-                    <span><strong className="text-ink">Zero-Click Archiving:</strong> 사용자 개입 없는 히스토리 자동 축적</span>
+                    <span>Slack / Gmail API 연동 및 웹훅 처리 시스템 구현</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-action-blue font-bold">·</span>
-                    <span><strong className="text-ink">Context Persistence:</strong> 조직 내 정보 블랙박스 현상 완벽 제거</span>
+                    <span>LangChain 기반 Event Detection Agent 프로토타입 개발</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-action-blue font-bold">·</span>
+                    <span>Context Extraction 파이프라인 설계 및 데이터 정형화 구축</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-action-blue font-bold">·</span>
+                    <span>Vector DB(ChromaDB) 기반의 의미론적 히스토리 저장 구조</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* IMPACT SECTION */}
+              <div className="bg-canvas-parchment p-8 rounded-3xl mb-10 border border-gray-100">
+                <h4 className="text-xs font-black text-ink uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <Activity size={14} className="text-action-blue" /> Impact & Value
+                </h4>
+                <ul className="space-y-3 text-sm text-body-muted">
+                  <li className="flex gap-2">
+                    <span className="text-action-blue font-bold">·</span> 
+                    <span><strong className="text-ink">Zero-Click Archiving:</strong> 사용자 개입 없는 업무 히스토리 자동 축적</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-action-blue font-bold">·</span>
+                    <span><strong className="text-ink">Context Persistence:</strong> 조직 내 정보 블랙박스 현상 및 의사결정 맥락 유실 방지</span>
                   </li>
                   <li className="mt-4 pt-4 border-t border-gray-200 font-bold text-action-blue">
-                    → 인수인계 및 히스토리 추적 리소스 80% 절감 가능 <br />
-                    → 교육/학습 의사결정 데이터셋 구축 최적화
+                    → 인수인계 및 히스토리 재추적 리소스 80% 이상의 절감 효과 기대 <br />
+                    → 교육 및 학습 환경의 의사결정 데이터셋 구축 가속화
                   </li>
                 </ul>
               </div>
@@ -442,8 +468,8 @@ export default function App() {
               </div>
               <h3 className="text-5xl lg:text-6xl font-extrabold mb-8 tracking-tighter text-ink leading-tight">Vision-Voice Integrated <br /> 멀티모달 지능형 시스템</h3>
               <p className="text-body-muted text-xl mb-12 leading-relaxed max-w-xl font-normal">
-                Vision 센서와 Voice 인터페이스를 연계하여 사용자의 의도를 분석하는 시스템입니다. 단순 행동 인식을 넘어 <strong>학습자의 비정형 데이터를 실시간으로 수치화</strong>합니다. <br />
-                <span className="text-purple-600 font-bold mt-4 block">→ 이 구조는 학습자의 몰입도 및 행동 분석 교육 AI로 즉시 확장 가능합니다.</span>
+                Vision 센서와 Voice 인터페이스를 연계하여 사용자의 의도를 분석하는 시스템입니다. <span className="text-ink font-bold">Detection 기반 접근의 한계를 구조적으로 해결</span>했으며, 학습자의 비정형 데이터를 실시간으로 수치화합니다. <br />
+                <span className="text-purple-600 font-bold mt-4 block">→ 이 구조는 학습자의 몰입도 및 행동 데이터를 분석하는 AI 학습 시스템으로 확장 가능합니다.</span>
               </p>
               <div className="flex flex-wrap gap-3 mb-10">
                 {['Python', 'PyTorch', 'OpenCV', 'FastAPI'].map((skill, i) => (
@@ -661,8 +687,8 @@ export default function App() {
                 </div>
                 <div className="space-y-4">
                   <h4 className="text-action-blue font-black uppercase tracking-widest text-xs">Core Value 02</h4>
-                  <p className="text-xl font-bold leading-snug">Production-Ready 설계</p>
-                  <p className="text-sm opacity-60">LangChain/LangGraph를 활용한 자율 에이전트와 RAG 파이프라인으로 확장 가능한 시스템을 구축합니다.</p>
+                  <p className="text-xl font-bold leading-snug">Production-Ready 설계 및 구현</p>
+                  <p className="text-sm opacity-60">LangChain/LangGraph를 활용한 자율 에이전트와 RAG 파이프라인으로 실제 동작하는 백엔드 시스템을 구축합니다.</p>
                 </div>
                 <div className="space-span-2 space-y-4 col-span-1 md:col-span-2">
                   <h4 className="text-action-blue font-black uppercase tracking-widest text-xs">Core Value 03</h4>
@@ -673,11 +699,11 @@ export default function App() {
               
               <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
                 <p className="text-2xl lg:text-4xl text-white font-bold leading-tight">
-                  "교육 AI의 미래를 <br />
-                  <span className="text-action-blue">시스템으로 정착</span>시킬 엔지니어입니다."
+                  "교육 문제를 <span className="border-b-4 border-action-blue">단순 분석이 아닌, AI 시스템으로 실제 구현</span>까지 <br />
+                  연결할 수 있는 엔지니어입니다."
                 </p>
-                <a href="mailto:wd14177@gmail.com" className="bg-action-blue text-white px-10 py-4 rounded-full font-bold hover:scale-105 active:scale-95 transition-all text-xs uppercase tracking-widest">
-                  Let's Work Together
+                <a href="mailto:wd14177@gmail.com" className="bg-action-blue text-white px-10 py-5 rounded-full font-bold hover:scale-105 active:scale-95 transition-all text-xs uppercase tracking-widest shadow-xl shadow-action-blue/20">
+                  Contact for Collaboration
                 </a>
               </div>
             </div>
